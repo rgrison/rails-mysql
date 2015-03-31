@@ -1,22 +1,12 @@
-development:
-    rails: 
-        server: 
-            extra_packages: 
-                - atop
-                - chrony
-                
-staging:
-    rails: 
-        server: 
-            extra_packages: 
-                - atop
-                - chrony
-                
 production:
-    rails: 
-        server: 
-            extra_packages: 
-                - atop
-                - chrony                
+    mysql:
+    	server:
+    		unique_name: mysql-alpha
+    		vendor: digitalocean
+    		region: sfo1
+			size: 8gb
         configuration:
-            ruby_version: 2.1.5
+            version: 5.6
+			extra_packages:
+				- mysql-server-5.6
+				- percona-toolkit
