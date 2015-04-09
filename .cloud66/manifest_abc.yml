@@ -3,6 +3,11 @@ production:
         server: 
             extra_packages: 
                 - atop
-                - chrony                
+                - chrony        
+            unique_name: app
+            vendor: aws
+            region: us-east-1
+            size: m3.medium
+            root_disk_size: 100
         configuration:
             ruby_version: 2.1.5
