@@ -3,6 +3,6 @@ production:
     server:
       unique_name: mysql-alpha
     configuration:
-      version: 5.5
+      version: "5.5"
       extra_packages:
         - percona-toolkit
