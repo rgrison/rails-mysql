@@ -15,6 +15,7 @@ staging:
 production:
     rails: 
         server: 
+            unique_name: app
             vendor: aws
             key_name: Default              
         configuration:
