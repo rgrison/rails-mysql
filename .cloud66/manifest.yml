@@ -17,7 +17,7 @@ production:
         server: 
             unique_name: app
             vendor: aws
-            key_name: Default     
+            key_name: 1     
             region: us-east-1
             size: m3.medium            
         configuration:
