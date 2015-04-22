@@ -15,8 +15,7 @@ staging:
 production:
     rails: 
         server: 
-            extra_packages: 
-                - atop
-                - chrony                
+            vendor: aws
+            key_name: Default              
         configuration:
             ruby_version: 2.1.5
