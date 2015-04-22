@@ -17,6 +17,8 @@ production:
         server: 
             unique_name: app
             vendor: aws
-            key_name: Default              
+            key_name: Default     
+            region: us-east-1
+            size: m3.medium            
         configuration:
             ruby_version: 2.1.5
