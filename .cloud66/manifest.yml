@@ -19,4 +19,7 @@ staging:
             vpc_id: vpc-55ba3430
         server:
             unique_name: castlepoint-rds
+            vendor: aws
+            region: us-west-2
+            size: t2.micro
             subnet_id: subnet-fe7ca7a7
