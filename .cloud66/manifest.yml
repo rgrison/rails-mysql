@@ -10,7 +10,20 @@ production:
         - iotop
     server:
       unique_name: castlepoint
-    #   type: BYOC
+      vendor: aws
+      region: us-west-2
+      size: t2.micro
+      subnet_id: subnet-6b46ff0e
+  mysql:
+    configuration:
+      vpc_id: vpc-64872001
+      root_disk_size: 20
+      extra_packages:
+        - htop
+        - tmux
+        - iotop
+    server:
+      unique_name: db
       vendor: aws
       region: us-west-2
       size: t2.micro
