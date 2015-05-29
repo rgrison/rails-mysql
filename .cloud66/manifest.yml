@@ -14,3 +14,5 @@ staging:
             region: us-west-2
             size: t2.micro
             subnet_id: subnet-fe7ca7a7
+    mysql:
+        server: external
