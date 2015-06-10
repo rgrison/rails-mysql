@@ -7,6 +7,7 @@ class GreetingsController < ApplicationController
 
   	ball = Ball.create(:dimples => Random.rand(1000))
   	@balls = "Created a golf ball with #{ball.dimples} dimples!"
+  	puts "hello logs"
 
   	@rails_stack_path = ENV['RAILS_STACK_PATH']
   end
