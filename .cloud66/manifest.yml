@@ -20,5 +20,6 @@ production:
             extra_packages: 
                 - atop
                 - chrony                
-        configuration:    
+        configuration:
+            ruby_version: 2.1.5
             locked_passenger_version: 4.0.59
