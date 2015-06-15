@@ -22,4 +22,4 @@ production:
                 - chrony                
         configuration:
             ruby_version: 2.1.5
-            locked_passenger_version: 4.0.59
+  #          locked_passenger_version: 4.0.59
