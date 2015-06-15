@@ -1,0 +1,9 @@
+production:
+  after_rails:
+    command: ls -la /
+    target: rails
+    run_on: all_servers
+    sudo: true
+  last_thing:
+    command: ls -la /
+    target: any
