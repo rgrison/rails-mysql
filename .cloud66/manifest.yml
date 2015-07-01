@@ -1,17 +1,92 @@
-production:
-    rails:
-        server:
-            unique_name: app
-            vendor: aws
-            region: us-east-1
-            size: m3.medium
-            availability_zone: us-east-1c
-        configuration:
-            root_disk_size: 100
-    mysql:
-        server:
-            unique_name: db
-            vendor: aws
-            region: us-east-1
-            size: m3.medium
-            availability_zone: us-east-1b
+#production:
+ #   rails:
+   #     server:
+    #        unique_name: app
+     #       vendor: aws
+      #      region: us-east-1
+     #       size: m3.medium
+      #      availability_zone: us-east-1c
+      #  configuration:
+      #      root_disk_size: 100
+#    mysql:
+ #       server:
+  #          unique_name: db
+   #         vendor: aws
+    #        region: us-east-1
+     #       size: m3.medium
+      #      availability_zone: us-east-1b
+development: 
+  mongodb: 
+    shared_server: dev
+  postgresql: 
+    shared_server: dev
+  rails: 
+    configuration: 
+      activeprotect: 
+        whitelist: "72.14.190.28"
+      vpc_id: vpc-f55d3d90
+    server: 
+      availability_zone: sa-east-1b
+      region: sa-east-1
+      size: t2.medium
+      subnet_id: subnet-2f7de34a
+      vendor: aws
+      vpc_id: vpc-7f87001a
+  redis: 
+    shared_server: dev
+production: 
+  memcached: 
+    server: external
+  mongodb: 
+    configuration: 
+      activeprotect: 
+        whitelist: "72.14.190.28"
+      vpc_id: vpc-f55d3d90
+    server: 
+      availability_zone: sa-east-1b
+      region: sa-east-1
+      size: t2.small
+      subnet_id: subnet-2f7de34a
+      type: BYOC
+      unique_name: mongodb
+      vendor: aws
+  postgresql: 
+    server: external
+  rails: 
+    configuration: 
+      activeprotect: 
+        whitelist: "72.14.190.28"
+      vpc_id: vpc-f55d3d90
+    server: 
+      availability_zone: sa-east-1b
+      region: sa-east-1
+      size: t2.medium
+      subnet_id: subnet-2f7de34a
+      type: BYOC
+      unique_name: frontend
+      vendor: aws
+  redis: 
+    server: external
+staging: 
+  memcached: 
+    shared_server: staging
+  mongodb: 
+    shared_server: staging
+  postgresql: 
+    shared_server: staging
+  rails: 
+    configuration: 
+      activeprotect: 
+        whitelist: "72.14.190.28"
+      vpc_id: vpc-f55d3d90
+    server: 
+      
+      availability_zone: sa-east-1b
+      region: sa-east-1
+      size: t2.medium
+      subnet_id: subnet-2f7de34a
+      vendor: aws
+      vpc_id: vpc-f55d3d90
+  redis: 
+    shared_server: staging
+            
