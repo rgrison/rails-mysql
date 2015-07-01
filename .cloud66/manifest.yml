@@ -17,9 +17,9 @@
       #      availability_zone: us-east-1b
 development: 
   mongodb: 
-    shared_server: dev
+    same_as: dev
   postgresql: 
-    shared_server: dev
+    same_as: dev
   rails: 
     configuration: 
       activeprotect: 
@@ -34,7 +34,7 @@ development:
       vendor: aws
       vpc_id: vpc-7f87001a
   redis: 
-    shared_server: dev
+    same_as: dev
 production: 
   memcached: 
     server: external
@@ -72,11 +72,11 @@ production:
     server: external
 staging: 
   memcached: 
-    shared_server: staging
+    same_as: staging
   mongodb: 
-    shared_server: staging
+    same_as: staging
   postgresql: 
-    shared_server: staging
+    same_as: staging
   rails: 
     configuration: 
       activeprotect: 
@@ -91,5 +91,5 @@ staging:
       vendor: aws
       vpc_id: vpc-f55d3d90
   redis: 
-    shared_server: staging
+    same_as: staging
             
