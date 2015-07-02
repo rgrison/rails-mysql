@@ -26,7 +26,7 @@ development:
         whitelist: "72.14.190.28"
       vpc_id: vpc-f55d3d90
     server: 
-      unique_name: sktest
+      #unique_name: sktest
       availability_zone: sa-east-1b
       region: sa-east-1
       size: t2.medium
@@ -44,7 +44,7 @@ production:
         whitelist: "72.14.190.28"
       vpc_id: vpc-f55d3d90
     server: 
-      unique_name: sktest
+      #unique_name: sktest
       availability_zone: sa-east-1b
       region: sa-east-1
       size: t2.small
@@ -60,7 +60,7 @@ production:
         whitelist: "72.14.190.28"
       vpc_id: vpc-f55d3d90
     server: 
-      unique_name: sktest
+      #unique_name: sktest
       availability_zone: sa-east-1b
       region: sa-east-1
       size: t2.medium
