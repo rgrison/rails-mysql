@@ -22,7 +22,7 @@ production:
             ruby_version: 2.1.5
     glusterfs:
         configuration:
-            mount_targets: ['app']
+            mount_targets: ['db']
             volumes:
                 - volume:
                     name: shab-tst
