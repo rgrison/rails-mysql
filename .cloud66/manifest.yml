@@ -22,8 +22,8 @@ production:
             ruby_version: 2.1.5
     glusterfs:
         configuration:
-            mount_targets: ['db']
+            mount_targets: ['app']
             volumes:
                 - volume:
-                    name: shab-tst
-                    mount: "/mnt/shabshab"
+                    name: khash-tst
+                    mount: "/mnt/hellokhash"
