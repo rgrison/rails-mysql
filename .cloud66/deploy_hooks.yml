@@ -1,5 +1,5 @@
 production: # Environment
-  after_rails:
+  after_symlink:
     - command: sudo chown nginx:app_writers -RH $STACK_PATH/tmp/ && sudo chmod 0775 -R $STACK_PATH/tmp/
       target: rails
       run_on: all_servers
