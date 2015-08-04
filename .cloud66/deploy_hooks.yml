@@ -1,7 +1,6 @@
-production:
+production: # Environment
   after_rails:
-    - snippet: cloud66/passenger_nginx_module
+    - command: sudo chown nginx:app_writers -R $STACK_PATH/tmp/ && sudo chmod 0775 -R $STACK_PATH/tmp/
       target: rails
-      sudo: true
-      execute: true
-      apply_during: all
+      run_on: all_servers
+      execute: true 
