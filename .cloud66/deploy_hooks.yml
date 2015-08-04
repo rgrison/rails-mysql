@@ -1,6 +1,6 @@
 production: # Environment
   last_thing:
-    - command: sudo chown nginx:app_writers -R $STACK_PATH/tmp/ && sudo chmod 0775 -R $STACK_PATH/tmp/
+    - command: sudo chown nginx:nginx -R $STACK_PATH/tmp/ && sudo chmod 0775 -R $STACK_PATH/tmp/
       target: rails
       run_on: all_servers
       execute: true 
