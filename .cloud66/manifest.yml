@@ -20,3 +20,5 @@ production:
                 - chrony                
         configuration:
             ruby_version: 2.1.5
+    environment_variables:
+        DATABASE_USERNAME: value1
