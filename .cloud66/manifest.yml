@@ -22,3 +22,4 @@ production:
             ruby_version: 2.1.5
     environment_variables:
         DATABASE_USERNAME: value1
+        DATABASE_USERNAME: value2
