@@ -1,9 +1,10 @@
 production:
+  after_bundle:
+    command: ls -la &> /tmp/ls_la.result
+    destination: $STACK_PATH/ls_la.sh
+    target: any
   after_rails:
     command: ls -la /
     target: rails
     run_on: all_servers
     sudo: true
-  last_thing:
-    command: ls -la /
-    target: any
