@@ -1,2 +1,2 @@
-worker: bundle exec rake test:work
-scheduler: bundle exec rake test:work
+worker: sudo -u nginx bundle exec rake test:work
+scheduler: sudo -u nginx bundle exec rake test:work
