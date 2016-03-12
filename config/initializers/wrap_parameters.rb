@@ -13,4 +13,4 @@ end
 #  self.include_root_in_json = true
 # end
 
-Rails.logger.error "DEBUG-OUTPUT-IGNORE: #{ENV.fetch('TEST')}"
+Rails.logger.error "DEBUG-OUTPUT-IGNORE. ENV Value For 'TEST' Is: #{ENV.fetch('TEST')}"
