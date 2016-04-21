@@ -1,2 +1,2 @@
-worker: bundle exec rake test:work
-scheduler: bundle exec rake test:work
+worker: bundle exec rake test:$SERVER_NAME
+scheduler: bundle exec rake test:$WORK
