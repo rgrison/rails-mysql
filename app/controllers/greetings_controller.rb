@@ -3,6 +3,8 @@ class GreetingsController < ApplicationController
   caches_page :hello
 
   def hello
+	File.open("/tmp/test_before", "a")
+
   	@message = "I'm a Rails 4.0.0 Application"
 
   	ball = Ball.create(:dimples => Random.rand(1000))
