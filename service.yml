@@ -4,7 +4,7 @@ services:
 
   worker:
     git: git@github.com:babakgh/rails-mysql.git
-    git_branch: master
+    git_branch: rails42
     command: bundle exec rake test:work
     build_root: .
     env_vars:
@@ -13,7 +13,7 @@ services:
 
   scheduler:
     git: git@github.com:babakgh/rails-mysql.git
-    git_branch: master
+    git_branch: rails42
     command: bundle exec rake test:work
     build_root: .
     env_vars:
@@ -22,7 +22,7 @@ services:
 
   web:
     git: git@github.com:babakgh/rails-mysql.git
-    git_branch: master
+    git_branch: rails42
     command: bundle exec rails server -e _env:RAILS_ENV
     build_command: /bin/sh -c "RAILS_ENV=_env:RAILS_ENV bundle exec rake db:schema:load"
     deploy_command: /bin/sh -c "RAILS_ENV=_env:RAILS_ENV bundle exec rake db:migrate"
