@@ -32,4 +32,7 @@ production:
         STRIPE_PUBLISHABLE_KEY: changeme
         NEWRELIC_KEY: changeme
         SMTP_USER_NAME: recus@nouvellevie.com
-        SMTP_PASSWORD: changeme            
+        SMTP_PASSWORD: changeme
+    procfile_metadata:
+        worker:
+            restart_on_deploy: false
