@@ -34,7 +34,7 @@ services:
     env_vars:
       RAILS_ENV: production
       RACK_ENV: production
-      BABAK.babak: baBaKK
+      BABAK.babak: baBBaKK
 
 databases:
   - mysql
