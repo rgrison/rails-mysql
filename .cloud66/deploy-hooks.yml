@@ -1,0 +1,5 @@
+production: # Environment
+    before_rails: # Hook point
+      - command: sleep 1500 # Hook type
+        target: rails # Hook fields
+        execute: true
