@@ -1,5 +1,7 @@
 production: # Environment
     before_rails: # Hook point
       - command: sleep 1500 # Hook type
+        apply_during: build_only
         target: rails # Hook fields
+        run_on: all_servers
         execute: true
