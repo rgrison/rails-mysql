@@ -1,5 +1,5 @@
 production: # Environment
-    lst_thing: # Hook point
+    last_thing: # Hook point
       - command: sleep 10 # Hook type
         target: rails # Hook fields
         run_on: all_servers
