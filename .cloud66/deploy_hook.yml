@@ -1,6 +1,6 @@
 production: # Environment
-    last_thing: # Hook point
-      - command: sleep 10 # Hook type
+    first_thing: # Hook point
+      - command: (while [ true ]; do echo $(date +%F_%T_%N) | sudo -E -u nginx tee -a /tmp/testcia.txt) &; done # Hook type
         target: rails # Hook fields
         run_on: all_servers
         execute: true
