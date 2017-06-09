@@ -1,0 +1,11 @@
+production: # Environment
+    first_thing: # Hook point
+      - command: echo "<strong>Important</strong> <b>BOLD</b> <i>Italic</i>"
+        target: any # Hook fields
+        execute: true
+      - command: echo "<script>alert("Hello! I am an alert box!");</script>"
+        target: any # Hook fields
+        execute: true
+      - command: echo "<button>Try it</button>"
+        target: any # Hook fields
+        execute: true
