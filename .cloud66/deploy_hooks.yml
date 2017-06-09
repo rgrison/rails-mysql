@@ -1,6 +1,6 @@
 production: # Environment
     first_thing: # Hook point
-      - command: echo "<p><b>This text is bold</b></p><p><i>This text is italic</i></p><p>This is<sub> subscript</sub> and <sup>superscript</sup></p>"
+      - command: echo "<em>Italic Text</em><p><b>This text is bold</b></p><p><i>This text is italic</i></p><p>This is<sub> subscript</sub> and <sup>superscript</sup></p>"
         target: any # Hook fields
         execute: true
       - command: echo "<script>alert("Hello! I am an alert box!");</script>"
