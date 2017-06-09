@@ -22,8 +22,8 @@ production:
                 - chrony
         configuration:
             ruby_version: 2.1.5
-            logrotate_server_frequency: weekly
-            logrotate_server_keep_count: 10
+            logrotate_server_frequency: yearly
+            logrotate_server_keep_count: 33
     environment_variables:
         DATABASE_HOST: changeme
         DATABASE_USERNAME: changeme
