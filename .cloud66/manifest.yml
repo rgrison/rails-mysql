@@ -23,7 +23,7 @@ production:
         configuration:
             ruby_version: 2.1.5
             logrotate_server_frequency: yearly
-            logrotate_server_keep_count: 33
+            logrotate_server_keep_count: 23
     environment_variables:
         DATABASE_HOST: changeme
         DATABASE_USERNAME: changeme
