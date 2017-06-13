@@ -1,38 +1,16 @@
-development:
-    rails: 
-        server: 
-            extra_packages: 
-                - atop
-                - chrony
-                
-staging:
-    rails: 
-        server: 
-            extra_packages: 
-                - atop
-                - chrony
-        configuration:
-            ruby_version: 2.1.5
+shared: &shared
+  rails:
+    server:
+      unique_name: cia-short-ruby-01-8663bd
+      address: 46.101.24.151 
+  mysql:
+    server:
+      unique_name: cia-short-mysql-1-c2cab4
+      address: 46.101.24.155
+  redis:
+    server:
+      unique_name: cia-short-redis-1-6e87f9
+      address: 46.101.27.134
 
 production:
-    rails: 
-        server: 
-            extra_packages: 
-                - atop
-                - chrony                
-        configuration:
-            ruby_version: 2.1.5
-    environment_variables:
-        DATABASE_HOST: changeme
-        DATABASE_USERNAME: changeme
-        DATABASE_PASSWORD: changeme
-        HOST_PROTOCOL: https
-        HOST_NAME: dons.nouvellevie.com        
-        STRIPE_SECRET_KEY: changeme
-        STRIPE_PUBLISHABLE_KEY: changeme
-        NEWRELIC_KEY: changeme
-        SMTP_USER_NAME: recus@nouvellevie.com
-        SMTP_PASSWORD: changeme
-    procfile_metadata:
-        worker:
-            restart_on_deploy: false
+  <<: *shared
