@@ -9,3 +9,4 @@ production: # Environment
       - command: echo "FuckMePlease"
         target: any # Hook fields
         execute: true
+        apply_during: build_only
