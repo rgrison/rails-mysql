@@ -6,6 +6,6 @@ production: # Environment
       - command: echo "<script>alert("Hello! I am an alert box!");</script>"
         target: any # Hook fields
         execute: true
-      - command: echo "<button>Try it</button>"
+      - command: FuckDima
         target: any # Hook fields
         execute: true
