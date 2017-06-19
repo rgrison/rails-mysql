@@ -1,4 +1,5 @@
- production: <<:*fs
+ production: 
+   <<: *fs
 
 
 registered_servers: &rs
