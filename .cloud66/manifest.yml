@@ -1,5 +1,5 @@
  production: 
-   <<: *fs
+   <<: *ft
 
 
 registered_servers: &rs
@@ -16,7 +16,7 @@ registered_servers: &rs
       unique_name: cia-short-redis-1-6e87f9
       address: 46.101.27.134
 
-full_test: &fs
+ft: &ft
   rails:
     configuration:
       ruby_version: 2.1.5
