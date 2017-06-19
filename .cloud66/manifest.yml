@@ -1,28 +1,7 @@
- production:
-    rails: 
-        server: 
-            extra_packages: 
-                - atop
-                - chrony                
-        configuration:
-            ruby_version: 2.1.5
-    environment_variables:
-        DATABASE_HOST: changeme
-        DATABASE_USERNAME: changeme
-        DATABASE_PASSWORD: changeme
-        HOST_PROTOCOL: https
-        HOST_NAME: dons.nouvellevie.com        
-        STRIPE_SECRET_KEY: changeme
-        STRIPE_PUBLISHABLE_KEY: changeme
-        NEWRELIC_KEY: changeme
-        SMTP_USER_NAME: recus@nouvellevie.com
-        SMTP_PASSWORD: changeme
-    procfile_metadata:
-        worker:
-            restart_on_deploy: false
+ production: <<fs
 
 
-shared: &shared
+registered_servers: &rs
   rails:
     server:
       unique_name: cia-short-ruby-01-8663bd
@@ -35,3 +14,33 @@ shared: &shared
     server:
       unique_name: cia-short-redis-1-6e87f9
       address: 46.101.27.134
+
+full_test: &fs
+  rails:
+    configuration:
+      ruby_version: 2.1.5
+    servers:
+      server:
+        unique_name: app_1
+        region: lon1
+        size: 2gb
+        vendor: digitalocean
+        key_name: default
+      server:
+        unique_name: app_2
+        region: lon1
+        size: 1gb
+        vendor: digitalocean
+        key_name: default
+  load_balancer:
+    server:
+      unique_name: loadbalance
+      size: 1gb
+      region: lon1
+      vendor: digitalocean
+      key_name: default
+    configuration:
+      httpchk: HEAD / HTTP/1.1\r\nHost:haproxy  #default value 
+  procfile_metadata:
+    worker:
+      restart_on_deploy: false
