@@ -1,6 +1,4 @@
- production: 
-   <<: *ft
-
+ 
 
 registered_servers: &rs
   rails:
@@ -44,3 +42,6 @@ ft: &ft
   procfile_metadata:
     worker:
       restart_on_deploy: false
+      
+production: 
+   <<: *ft
