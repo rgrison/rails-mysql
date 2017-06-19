@@ -30,6 +30,13 @@ ft: &ft
       size: 1gb
       vendor: digitalocean
       key_name: default
+  mysql:
+    server:
+      unique_name: db1
+      region: lon1
+      size: 2gb
+      vendor: digitalocean
+      key_name: default
   load_balancer:
     server:
       unique_name: loadbalance
