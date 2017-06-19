@@ -24,12 +24,12 @@ ft: &ft
       size: 2gb
       vendor: digitalocean
       key_name: default
-    server:
-      unique_name: app_2
-      region: lon1
-      size: 1gb
-      vendor: digitalocean
-      key_name: default
+#    server:
+#      unique_name: app_2
+#      region: lon1
+#      size: 1gb
+#      vendor: digitalocean
+#      key_name: default
   mysql:
     server:
       unique_name: db1
