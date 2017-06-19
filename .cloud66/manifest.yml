@@ -18,18 +18,19 @@ ft: &ft
   rails:
     configuration:
       ruby_version: 2.1.5
-    server:
-      unique_name: app_1
-      region: lon1
-      size: 2gb
-      vendor: digitalocean
-      key_name: Default
-    server:
-      unique_name: app_2
-      region: lon1
-      size: 1gb
-      vendor: digitalocean
-      key_name: Default
+    servers:
+      server:
+        unique_name: app_1
+        region: lon1
+        size: 2gb
+        vendor: digitalocean
+        key_name: Default
+      server:
+        unique_name: app_2
+        region: lon1
+        size: 1gb
+        vendor: digitalocean
+        key_name: Default
   mysql:
     server:
       unique_name: db1
