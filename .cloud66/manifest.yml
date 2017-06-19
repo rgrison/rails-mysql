@@ -23,7 +23,7 @@ ft: &ft
       region: lon1
       size: 2gb
       vendor: digitalocean
-      key_name: default
+      key_name: Default
 #    server:
 #      unique_name: app_2
 #      region: lon1
@@ -36,14 +36,14 @@ ft: &ft
       region: lon1
       size: 2gb
       vendor: digitalocean
-      key_name: default
+      key_name: Default
   load_balancer:
     server:
       unique_name: loadbalance
       size: 1gb
       region: lon1
       vendor: digitalocean
-      key_name: default
+      key_name: Default
     configuration:
       httpchk: HEAD / HTTP/1.1\r\nHost:haproxy  #default value 
   procfile_metadata:
