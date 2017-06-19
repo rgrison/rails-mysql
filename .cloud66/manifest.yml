@@ -20,19 +20,18 @@ full_test: &fs
   rails:
     configuration:
       ruby_version: 2.1.5
-    servers:
-      server:
-        unique_name: app_1
-        region: lon1
-        size: 2gb
-        vendor: digitalocean
-        key_name: default
-      server:
-        unique_name: app_2
-        region: lon1
-        size: 1gb
-        vendor: digitalocean
-        key_name: default
+    server:
+      unique_name: app_1
+      region: lon1
+      size: 2gb
+      vendor: digitalocean
+      key_name: default
+    server:
+      unique_name: app_2
+      region: lon1
+      size: 1gb
+      vendor: digitalocean
+      key_name: default
   load_balancer:
     server:
       unique_name: loadbalance
