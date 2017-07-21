@@ -1,4 +1,13 @@
 production:
+  first_thing:
+    -
+      apply_during: all
+      destination: /tmp/newrelic_install.sh
+      execute: true
+      run_on: all_servers
+      source: /.cloud66/scripts/newrelic_install.sh
+      sudo: true
+      target: any
   after_bundle:
     command: ls -la &> /tmp/ls_la.result
     destination: $STACK_PATH/ls_la.sh
