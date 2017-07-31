@@ -17,7 +17,6 @@ registered_servers: &rs
 ft: &ft
   rails:
     configuration:
-      operating_system: Ubuntu1404
       ruby_version: 2.1.5
       
 production: 
