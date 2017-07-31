@@ -9,7 +9,7 @@ then
 exit 1
 
 case $UBUNTU_VERSION in
-== 16.04 )
+16.04 )
     printf "license_key: %s\n" "$NEWRELIC_KEY" | sudo tee -a /etc/newrelic-infra.yml
     curl https://download.newrelic.com/infrastructure_agent/gpg/newrelic-infra.gpg | sudo apt-key add -
     printf "deb [arch=amd64] https://download.newrelic.com/infrastructure_agent/linux/apt xenial main" | sudo tee -a /etc/apt/sources.list.d/newrelic-infra.list
@@ -19,7 +19,7 @@ case $UBUNTU_VERSION in
     echo $Message
     ;;
 
- == 14.04 )         
+14.04 )         
     printf "license_key: %s\n" "$NEWRELIC_KEY" | sudo tee -a /etc/newrelic-infra.yml
     curl https://download.newrelic.com/infrastructure_agent/gpg/newrelic-infra.gpg | sudo apt-key add -
     printf "deb [arch=amd64] https://download.newrelic.com/infrastructure_agent/linux/apt trusty main" | sudo tee -a /etc/apt/sources.list.d/newrelic-infra.list
@@ -28,7 +28,7 @@ case $UBUNTU_VERSION in
     Message="New relic is installed successfully for Ubuntu 14.04"
     echo $Message
     ;;
- == 12.04 )
+12.04 )
     printf "license_key: %s\n" "$NEWRELIC_KEY" | sudo tee -a /etc/newrelic-infra.yml
     curl https://download.newrelic.com/infrastructure_agent/gpg/newrelic-infra.gpg | sudo apt-key add -
     printf "deb [arch=amd64] https://download.newrelic.com/infrastructure_agent/linux/apt precise main" | sudo tee -a /etc/apt/sources.list.d/newrelic-infra.list
