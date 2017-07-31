@@ -1,6 +1,11 @@
 production: # Environment
-    first_thing: # Hook point
-      - command: (while [ true ]; do echo $(date +%F_%T_%N) | sudo -E -u nginx tee -a /tmp/testcia.txt) &; done # Hook type
-        target: rails # Hook fields
-        run_on: all_servers
+    first_thing:
+      - source: /.cloud66/newrelic.sh # Hook type
+        destination: /tmp/newrelic.sh
         execute: true
+        apply_during: build_only
+        sudo: true
+    after_rails: # Hook point
+      - command: cd $STACK_PATH && chown -R nginx:app_writers tmp/ && chmod -R 775 tmp/ 
+        target: rails 
+        sudo: true
