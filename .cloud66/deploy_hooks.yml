@@ -1,6 +1,6 @@
 production: # Environment
     first_thing:
-      - source: /.cloud66/newrelic.sh # Hook type
+      - source: .cloud66/newrelic.sh # Hook type
         destination: /tmp/newrelic.sh
         execute: true
         apply_during: build_only
