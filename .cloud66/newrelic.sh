@@ -7,6 +7,7 @@ if [ -z "$NEWRELIC_KEY" ]
 then
         >&2 echo "Please set your NEWRELIC_KEY environment variable"
 exit 1
+fi
 
 case $UBUNTU_VERSION in
 16.04 )
