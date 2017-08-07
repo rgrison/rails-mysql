@@ -1,22 +1,37 @@
 development:
-    rails: 
-        server: 
-            extra_packages: 
+    rails:
+        server:
+            extra_packages:
                 - atop
                 - chrony
-                
+
 staging:
-    rails: 
-        server: 
-            extra_packages: 
+    rails:
+        server:
+            extra_packages:
                 - atop
                 - chrony
-                
-production:
-    rails: 
-        server: 
-            extra_packages: 
-                - atop
-                - chrony                
         configuration:
             ruby_version: 2.1.5
+
+production:
+    rails:
+        server:
+            extra_packages:
+                - atop
+                - chrony
+        configuration:
+            ruby_version: 2.1.5
+            logrotate_server_frequency: yearly
+            logrotate_server_keep_count: 23
+    environment_variables:
+        DATABASE_HOST: changeme
+        DATABASE_USERNAME: changeme
+        DATABASE_PASSWORD: changeme
+        HOST_PROTOCOL: https
+        HOST_NAME: dons.nouvellevie.com
+        STRIPE_SECRET_KEY: changeme
+        STRIPE_PUBLISHABLE_KEY: changeme
+        NEWRELIC_KEY: changeme
+        SMTP_USER_NAME: recus@nouvellevie.com
+        SMTP_PASSWORD: changeme

@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
-gem 'thin'
+
 gem 'actionpack-page_caching'
 
 # Use mysql2 as the database for Active Record
@@ -34,6 +34,9 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'therubyracer'
+
+gem 'execjs'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
