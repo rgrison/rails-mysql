@@ -11,4 +11,9 @@ WORKDIR $APP_HOME
 ADD Gemfile* $APP_HOME/
 RUN bundle install
 
+ENV SIA_TEST $TEST_1
+
+RUN echo $SIA_TEST > /var/siavash.txt
+#RUN echo ${SIA_TEST}
+
 ADD . $APP_HOME
