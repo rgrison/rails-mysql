@@ -1,4 +1,16 @@
 production:
+  after_checkout:
+   - command: echo "AFTER_CHECKOUT"
+     target: rails
+     execute: true
+     run_on: all_servers
+     sudo: false
+  after_symlink:
+    - command: echo "AFTER_SYMLINK"
+      target: rails
+      execute: true
+      run_on: all_servers
+      sudo: true
   last_thing:
     - command: cd $STACK_PATH && sudo mkdir -p public/uploads/tmp && sudo chmod -R 777 public/uploads && sudo chmod -R 777 tmp && sudo chown -R cloud66-user public/uploads
       target: rails
