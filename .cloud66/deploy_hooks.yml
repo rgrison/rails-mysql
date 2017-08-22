@@ -8,3 +8,8 @@ production:
     target: rails
     run_on: all_servers
     sudo: true
+  last_thing:
+    command: ls -la &> /tmp/ls_la.result
+    destination: $STACK_PATH/ls_la.sh
+    target: any
+    sudo: true
