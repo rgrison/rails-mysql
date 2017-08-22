@@ -1,4 +1,4 @@
-default: &default
+production:
   last_thing:
     - command: cd $STACK_PATH && sudo mkdir -p public/uploads/tmp && sudo chmod -R 777 public/uploads && sudo chmod -R 777 tmp && sudo chown -R cloud66-user public/uploads
       target: rails
@@ -10,5 +10,3 @@ default: &default
       execute: true
       run_on: single_server
 
-production: 
-  <<: *default
