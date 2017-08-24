@@ -17,8 +17,3 @@ production:
       execute: true
       run_on: all_servers
       sudo: true
-    - command: cd $STACK_PATH && bundle exec rake after_party:run
-      target: rails
-      execute: true
-      run_on: single_server
-
