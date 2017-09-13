@@ -14,9 +14,8 @@ registered_servers: &rs
       unique_name: cia-short-redis-1-6e87f9
       address: 46.101.27.134
 
-ft: &ft
+production:
   rails:
     configuration:
-      operating_system: Ubuntu1404
-      ruby_version: 2.1.5
+      ruby_version: 2.3.1
       
