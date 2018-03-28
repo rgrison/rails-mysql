@@ -1,8 +1,8 @@
 namespace :test do
   task :work => :environment do
     loop do
-  	  puts "I'm working VERSION 7"
-  	  sleep(5)
+	  File.open("/tmp/log_test", "a") { |file| file.puts("hello VERSION 1") }
+  	  sleep(10)
   	end
   end
 end
