@@ -1,7 +1,7 @@
 namespace :test do
   task :work => :environment do
     loop do
-  	  puts "I'm working VERSION 2"
+  	  puts "I'm working VERSION 3"
   	  sleep(5)
   	end
   end
