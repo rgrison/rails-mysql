@@ -10,3 +10,10 @@ production: # Environment
         target: any # Hook fields
         execute: true
         apply_during: build_only
+    after_symlink:
+      - source: /.cloud66/deploy_hooks.yml
+        destination: /config/this_is_a_test.yml
+        target: rails
+        sudo: true
+        apply_during: all
+        run_on: all_servers
