@@ -12,7 +12,7 @@ production: # Environment
         apply_during: build_only
     after_symlink:
       - source: /.cloud66/deploy_hooks.yml
-        destination: /config/this_is_a_test.yml
+        destination: $STACK_PATH/config/this_is_a_test.yml
         target: rails
         sudo: true
         apply_during: all
