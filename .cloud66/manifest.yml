@@ -7,11 +7,12 @@ production:
     rails:
         configuration:
             ruby_version: 2.1.5
-            cors:
-                origin: '*'
-                methods: 'GET, OPTIONS'
-                headers: 'Custom-Header, Another-Header'
-                credentials: true
+            nginx:
+                cors:
+                    origin: '*'
+                    methods: 'GET, OPTIONS'
+                    headers: 'Custom-Header, Another-Header'
+                    credentials: true
     environment_variables:
         DATABASE_HOST: changeme
         DATABASE_USERNAME: changeme
